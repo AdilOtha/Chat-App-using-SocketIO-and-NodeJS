@@ -4,34 +4,51 @@
 <head>
     <title>Chat-App</title>
     <link rel="icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/chat-styles.css">
 </head>
 
 <body>
-    <div class="chat">
-        <div class="chat__sidebar">
-
+    <div class="chat row">
+        <div class="chat__sidebar col s4 m3 l3">
+            <!-- Sidebar rendered here -->
         </div>
-        <div class="chat__main">
-            <div id="messages" class="chat__messages"></div>
+        <div class="chat__main col s8 m9 l9">
+            <div id="messages" class="chat__messages"><br>
+                <!-- Messages Template rendered here -->
+            </div>
             <div class="compose">
                 <form action="">
-                    <input type="text" name="inputMsg" placeholder="Message" required>
-                    <button id="msgBtn" name="submit">Send</button>
+                    <div class="row">
+                        <div class="col s11 m6 l6">
+                            <div class="input-field">
+                                <input type="text" name="inputMsg" placeholder="Message" required>
+                            </div>
+                        </div>
+                        <div class="input-field col s11 m4 l4">
+                            <button class="btn" id="msgBtn" name="submit">Send</button>
+                            <button class="btn" id="locationBtn">Send Location</button>
+                        </div>
+                    </div>
                 </form>
-                <button id="locationBtn">Send Location</button>
+
             </div>
-            </table>
         </div>
     </div>
 
     <script id="msgs-template" type="text/html">
         <div class="message">
-            <p>
+            <p class="flow-text">
                 <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
-            <p>{{message}}</p>
+            <p class="flow-text">{{message}}</p>
         </div>
     </script>
     <script id="locationMsgs-template" type="text/html">
@@ -45,11 +62,11 @@
     </script>
 
     <script id="sidebar-template" type="text/html">
-        <h3 class="room-title">{{room}}</h3>
-        <h3 class="list-title">Users</h3>
-        <ul class="users">
+        <h3 class="room-title flow-text">{{room}}</h3><br>
+        <h5 class="list-title flow-text">Users</h3>
+        <ul class="users flow-text">
             {{#users}}
-            <li>{{username}}</li>
+            <li class="users_list">{{username}}</li>
             {{/users}}
         </ul>
     </script>
