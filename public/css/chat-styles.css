@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 html,body,.chat{
-    height: 100% !important;
+    height: 100vh !important;
 }
 .chat{
     margin-bottom: 0;
-    width: 100% !important;
 }
 body {
     line-height: 1.4;
@@ -66,10 +65,10 @@ body {
     color: #777;
 }
 
-.btn {
+.btn-floating {
     background-color: #7C5CBF;
 }
-.btn:hover{
+.btn-floating:hover{
     background-color: #7C5CBF !important;    
 }
 @media only screen and (max-width: 600px){

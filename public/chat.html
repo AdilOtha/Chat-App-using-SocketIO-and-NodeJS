@@ -24,16 +24,16 @@
                 <!-- Messages Template rendered here -->
             </div>
             <div class="compose">
-                <form action="">
+                <form action="" autocomplete="off">
                     <div class="row">
-                        <div class="col s11 m6 l6">
+                        <div class="col s6 m6 l6">
                             <div class="input-field">
-                                <input type="text" name="inputMsg" placeholder="Message" required>
+                                <input type="text" name="inputMsg" placeholder="Message" autocomplete="off" required>
                             </div>
                         </div>
-                        <div class="input-field col s11 m4 l4">
-                            <button class="btn" id="msgBtn" name="submit">Send</button>
-                            <button class="btn" id="locationBtn">Send Location</button>
+                        <div class="input-field col s5 m4 l4">
+                            <button class="btn-floating" id="msgBtn" name="submit"><i class="material-icons">send</i></button>
+                            <button class="btn-floating" id="locationBtn"><i class="material-icons">gps_fixed</i></button>
                         </div>
                     </div>
                 </form>
@@ -44,7 +44,7 @@
 
     <script id="msgs-template" type="text/html">
         <div class="message">
-            <p class="flow-text">
+            <p>
                 <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
