@@ -22,7 +22,7 @@ const autoscroll =()=>{
     const newMsgMargin=parseInt(newMsgStyles.marginBottom)
     // console.log($newMsg)
     // console.log(newMsgStyles)
-    // console.log(newMsgStyles.marginBottom)
+     console.log(newMsgStyles.marginBottom)
     const newMsgHeight= $newMsg.offsetHeight+newMsgMargin
 
     //visible height
@@ -35,7 +35,7 @@ const autoscroll =()=>{
     //scrollTop gives height from the top most position to top of scroll bar
     //as scrollBottom is not available
     const scrollOffset = $messages.scrollTop + visibleHeight
-    //console.log(scrollOffset)//gives float value so convert to int by Math.ceil
+    console.log(scrollOffset)//gives float value so convert to int by Math.ceil
 
     //checking or scroll length before every new msg has arrived
     //if scrolled at the bottom then change scroll height

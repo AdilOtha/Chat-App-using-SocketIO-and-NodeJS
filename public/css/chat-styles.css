@@ -8,11 +8,13 @@ html,body,.chat{
 }
 .chat{
     margin-bottom: 0;
+    width: 100% !important;
 }
 body {
     line-height: 1.4;
     color: #333333;
     font-family: Helvetica, Arial, sans-serif;
+    overflow: hidden;
 }
 
 .chat__sidebar {
