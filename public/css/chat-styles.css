@@ -6,10 +6,14 @@
 html,body,.chat{
     height: 100vh !important;
 }
+html,body{
+    overflow: hidden;
+}
 .chat{
     margin-bottom: 0;
 }
 body {
+    position: relative;
     line-height: 1.4;
     color: #333333;
     font-family: Helvetica, Arial, sans-serif;
@@ -72,7 +76,7 @@ body {
     background-color: #7C5CBF !important;    
 }
 @media only screen and (max-width: 600px){
-    .btn{
-        margin-bottom: 5px;
+    .compose{
+        bottom: 10px;
     }
 }
