@@ -6,9 +6,9 @@
 html,body,.chat{
     height: 100vh !important;
 }
-html,body{
+/* html,body{
     overflow: hidden;
-}
+} */
 .chat{
     margin-bottom: 0;
 }
